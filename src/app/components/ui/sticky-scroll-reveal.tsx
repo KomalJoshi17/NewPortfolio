@@ -86,10 +86,11 @@ export const StickyScroll = ({
                     style={{
                       backgroundImage: typeof item.content === 'object' && 
                                       item.content !== null && 
-                                      'props' in item.content && 
-                                      item.content.props && 
-                                      'src' in item.content.props ? 
-                                      `url(${item.content.props.src})` : 
+                                      item.content.hasOwnProperty('props') && 
+                                      typeof item.content.props === 'object' &&
+                                      item.content.props !== null &&
+                                      item.content.props.hasOwnProperty('src') ? 
+                                      `url(${(item.content.props as any).src})` : 
                                       'none',
                       backgroundSize: "cover",
                       backgroundPosition: "center",
