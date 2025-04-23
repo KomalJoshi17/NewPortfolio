@@ -84,7 +84,19 @@ export const StickyScroll = ({
                   <motion.div
                     className="absolute inset-0 z-10 w-full h-full overflow-hidden rounded-lg shadow-lg shadow-black/30"
                     style={{
+                      // Around line 87, there's an issue with accessing props.src
+                      // We need to check if item.content has props and src properties
+                      // Change this:
                       backgroundImage: `url(${item.content?.props?.src})`,
+                      
+                      // To something like this that checks the type and existence of properties:
+                      backgroundImage: typeof item.content === 'object' && 
+                                      item.content !== null && 
+                                      'props' in item.content && 
+                                      item.content.props && 
+                                      'src' in item.content.props ? 
+                                      `url(${item.content.props.src})` : 
+                                      'none',
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       transform: "scale(1.1)",
@@ -186,11 +198,12 @@ export const StickyScroll = ({
 //     setActiveCard(closestIndex);
 //   });
 
-//   const gradientThemes = [
-//     "linear-gradient(135deg, #4C1D95, #831843)",     // Deep violet to dark rose
-//     "linear-gradient(135deg, #082F49, #1E3A8A)",     // Deep cyan to navy
-//     "linear-gradient(135deg, #7C2D12, #713F12)",     // Burnt orange to olive
-//   ];
+//   // Wrap gradientThemes in useMemo to prevent it from being recreated on every render
+//   const gradientThemes = useMemo(() => [
+//     "linear-gradient(135deg, #4C1D95, #831843)",     // deep violet to dark rose
+//     "linear-gradient(135deg, #082F49, #1E3A8A)",     // deep cyan to navy
+//     "linear-gradient(135deg, #7C2D12, #713F12)",     // burnt orange to olive
+//   ], []);
 
 //   const [backgroundGradient, setBackgroundGradient] = useState<string>(gradientThemes[0]);
 
