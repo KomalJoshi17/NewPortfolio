@@ -173,7 +173,6 @@ export const TypewriterEffectSmooth = ({
         }}
         transition={{
           duration: 0.8,
-
           repeat: Infinity,
           repeatType: "reverse",
         }}
@@ -325,7 +324,7 @@ export const TypewriterEffectSmooth = ({
 
 //   const [scope, animate] = useAnimate();
 //   const isInView = useInView(scope);
-//   // Fix the useEffect dependency array by adding animate
+//   // Fix the missing dependency in useEffect
 //   useEffect(() => {
 //     if (isInView) {
 //       animate(

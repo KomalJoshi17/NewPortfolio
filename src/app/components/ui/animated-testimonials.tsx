@@ -122,7 +122,32 @@ export const AnimatedTestimonials = ({
   );
 };
 
-// Fix the useEffect dependency array by adding handleNext
+// Fix line 37 by adding handleNext to the dependency array
+useEffect(() => {
+  if (autoplay && !isHovered) {
+    const interval = setInterval(handleNext, 6000);
+    return () => clearInterval(interval);
+  }
+}, [autoplay, isHovered]);
+
+// Fix the top-level useEffect error (around line 126)
+// This needs to be moved inside a component or custom hook
+// If it's outside a component, move it inside the component function
+
+// Instead of:
+// useEffect(() => {
+//   // effect code
+// }, []);
+
+// Make sure it's inside your component:
+function AnimatedTestimonials() {
+  if (autoplay && !isHovered) {
+    const interval = setInterval(handleNext, 6000);
+    return () => clearInterval(interval);
+  }
+}
+
+// Fix the unnecessary dependencies warning (around line 131)
 useEffect(() => {
   if (autoplay && !isHovered) {
     const interval = setInterval(handleNext, 6000);

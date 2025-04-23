@@ -46,5 +46,8 @@ export function CarouselDemo() {
     </section>
   );
 }
-// Line 37 has an unescaped apostrophe (') that needs to be replaced with &apos;
-// Change something like "I'm" to "I&apos;m" or use double quotes outside
+// Change line 37 to escape the apostrophe
+// For example, if it says something like:
+// <p>I'm a developer</p>
+// Change to:
+<p>I&apos;m a developer</p>
