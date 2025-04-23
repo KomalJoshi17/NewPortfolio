@@ -84,13 +84,10 @@ export const StickyScroll = ({
                   <motion.div
                     className="absolute inset-0 z-10 w-full h-full overflow-hidden rounded-lg shadow-lg shadow-black/30"
                     style={{
-                      backgroundImage: typeof item.content === 'object' && 
-                                      item.content !== null && 
-                                      item.content.hasOwnProperty('props') && 
-                                      typeof item.content.props === 'object' &&
-                                      item.content.props !== null &&
-                                      item.content.props.hasOwnProperty('src') ? 
-                                      `url(${(item.content.props as { src: string }).src})` : 
+                      backgroundImage: React.isValidElement(item.content) && 
+                                      item.content.props && 
+                                      'src' in item.content.props ? 
+                                      `url(${item.content.props.src})` : 
                                       'none',
                       backgroundSize: "cover",
                       backgroundPosition: "center",
