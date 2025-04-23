@@ -46,8 +46,8 @@ export function CarouselDemo() {
     </section>
   );
 }
-// Change line 37 to escape the apostrophe
-// For example, if it says something like:
+// Replace the apostrophe on line 37 with &apos;
+// For example, if it says:
 // <p>I'm a developer</p>
 // Change to:
 <p>I&apos;m a developer</p>
