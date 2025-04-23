@@ -86,6 +86,8 @@ export const StickyScroll = ({
                     style={{
                       backgroundImage: React.isValidElement(item.content) && 
                                       item.content.props && 
+                                      typeof item.content.props === 'object' &&
+                                      item.content.props !== null &&
                                       'src' in item.content.props ? 
                                       `url(${item.content.props.src})` : 
                                       'none',
