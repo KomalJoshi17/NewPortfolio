@@ -3,6 +3,7 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import Image from "next/image";
 
 export function StickyScrollRevealDemo() {
   const content = [
@@ -12,9 +13,11 @@ export function StickyScrollRevealDemo() {
         "Certified for successful completion of the 100% Job Ready DSA Course by LearnYard, demonstrating strong foundations in Data Structures and Algorithms essential for technical interviews and real-world problem solving.",
       content: (
         <div className="flex h-48 w-full items-center justify-center bg-gray-700">
-          <img
+          <Image
             src="/assets/certificates/webdev.png"
             alt="Web Development Certificate"
+            width={500}
+            height={300}
             className="w-full object-cover rounded-md"
           />
         </div>
@@ -23,12 +26,14 @@ export function StickyScrollRevealDemo() {
     {
       title: "IBM DevOps and Software Engineering (Coursera)",
       description:
-        "Earned IBM’s Professional Certificate for mastering DevOps and Cloud Engineering tools like Docker, Kubernetes, GitHub, and CI/CD pipelines. Built hands-on experience in Agile, Linux scripting, and microservices development.",
+        "Earned IBM's Professional Certificate for mastering DevOps and Cloud Engineering tools like Docker, Kubernetes, GitHub, and CI/CD pipelines. Built hands-on experience in Agile, Linux scripting, and microservices development.",
       content: (
         <div className="flex h-48 w-full items-center justify-center bg-gray-700">
-          <img
+          <Image
             src="/assets/certificates/react.png"
             alt="React Certificate"
+            width={500}
+            height={300}
             className="w-full object-cover rounded-md"
           />
         </div>
@@ -40,9 +45,11 @@ export function StickyScrollRevealDemo() {
         "Successfully completed the Hack-a-Throne 1.0 hackathon organized by AIESEC in Jalandhar in collaboration with GeeksforGeeks. Demonstrated strong coding skills, problem-solving ability, and innovation under time constraints in a real-world tech challenge.",
       content: (
         <div className="flex h-48 w-full items-center justify-center bg-gray-700">
-          <img
+          <Image
             src="/assets/certificates/aws.png"
             alt="AWS Certificate"
+            width={500}
+            height={300}
             className="w-full object-cover rounded-md"
           />
         </div>

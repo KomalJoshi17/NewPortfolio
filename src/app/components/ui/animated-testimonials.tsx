@@ -3,6 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 
 type Testimonial = {
   quote: string;
@@ -68,9 +69,11 @@ export const AnimatedTestimonials = ({
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="absolute inset-0"
                 >
-                  <img
+                  <Image
                     src={testimonial.src}
                     alt={testimonial.name}
+                    width={500}
+                    height={300}
                     className="w-full h-full object-contain"
                     draggable={false}
                   />

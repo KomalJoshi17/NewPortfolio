@@ -324,7 +324,6 @@ export const TypewriterEffectSmooth = ({
 
 //   const [scope, animate] = useAnimate();
 //   const isInView = useInView(scope);
-//   // Fix the missing dependency in useEffect
 //   useEffect(() => {
 //     if (isInView) {
 //       animate(
