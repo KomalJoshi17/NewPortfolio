@@ -34,14 +34,12 @@ export const AnimatedTestimonials = ({
       const interval = setInterval(handleNext, 6000);
       return () => clearInterval(interval);
     }
-  }, [autoplay, isHovered]);
+  }, [autoplay, isHovered, handleNext]);
 
   return (
     <section
       id="work"
-
       className="scroll-mt-24 w-full bg-[#0B0D10] text-white font-sans px-4 py-12 flex flex-col items-center justify-center"
-      // className="w-full bg-[#0B0D10] text-white font-sans px-4 py-10 flex flex-col items-center justify-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -121,46 +119,3 @@ export const AnimatedTestimonials = ({
     </section>
   );
 };
-
-// Fix line 37 by adding handleNext to the dependency array
-useEffect(() => {
-  if (autoplay && !isHovered) {
-    const interval = setInterval(handleNext, 6000);
-    return () => clearInterval(interval);
-  }
-}, [autoplay, isHovered]);
-
-// Fix the top-level useEffect error (around line 126)
-// This needs to be moved inside a component or custom hook
-// If it's outside a component, move it inside the component function
-
-// Instead of:
-// useEffect(() => {
-//   // effect code
-// }, []);
-
-// Make sure it's inside your component:
-// The error is showing that there's a duplicate function declaration
-// Remove the second declaration of AnimatedTestimonials around line 159
-// Instead, make sure the useEffect hooks are properly placed inside the original function
-
-// Original function should look something like this:
-export function AnimatedTestimonials() {
-  if (autoplay && !isHovered) {
-    const interval = setInterval(handleNext, 6000);
-    return () => clearInterval(interval);
-  }
-}
-
-// Remove any duplicate function declarations like:
-// function AnimatedTestimonials() {
-//   ...
-// }
-
-// Fix the unnecessary dependencies warning (around line 131)
-useEffect(() => {
-  if (autoplay && !isHovered) {
-    const interval = setInterval(handleNext, 6000);
-    return () => clearInterval(interval);
-  }
-}, [autoplay, isHovered]);
