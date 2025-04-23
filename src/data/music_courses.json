@@ -1,0 +1,103 @@
+[
+    {
+      "id": 2,
+      "title": "Piano for Beginners",
+      "slug": "piano-for-beginners",
+      "description": "Start your musical journey with the basics of piano playing.",
+      "price": 89.99,
+      "instructor": "Jane Smith",
+      "isFeatured": true,
+      "image": "/courses/piano.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Digital Photography Basics",
+      "slug": "digital-photography-basics",
+      "description": "Master the essentials of digital photography and take stunning photos.",
+      "price": 109.99,
+      "instructor": "Mike Johnson",
+      "isFeatured": false,
+      "image": "/courses/photography.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Yoga for Everyone",
+      "slug": "yoga-for-everyone",
+      "description": "Improve flexibility and well-being with this all-level yoga course.",
+      "price": 59.99,
+      "instructor": "Sara Lee",
+      "isFeatured": true,
+      "image": "/courses/yoga.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Web Development Bootcamp",
+      "slug": "web-development-bootcamp",
+      "description": "Learn HTML, CSS, JavaScript, and build real websites from scratch.",
+      "price": 149.99,
+      "instructor": "Chris Martin",
+      "isFeatured": true,
+      "image": "/courses/webdev.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Creative Writing Essentials",
+      "slug": "creative-writing-essentials",
+      "description": "Unlock your imagination and write compelling stories and poems.",
+      "price": 74.99,
+      "instructor": "Emily Carter",
+      "isFeatured": false,
+      "image": "/courses/writing.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Photography with Smartphones",
+      "slug": "smartphone-photography",
+      "description": "Capture professional-quality photos using just your phone.",
+      "price": 69.99,
+      "instructor": "Tom Rivers",
+      "isFeatured": false,
+      "image": "/courses/smartphone.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Advanced Excel Techniques",
+      "slug": "advanced-excel-techniques",
+      "description": "Master formulas, pivot tables, and automation in Excel.",
+      "price": 89.99,
+      "instructor": "Lisa Wong",
+      "isFeatured": true,
+      "image": "/courses/excel.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Fitness at Home",
+      "slug": "fitness-at-home",
+      "description": "Stay fit and healthy with our no-equipment home workout routines.",
+      "price": 49.99,
+      "instructor": "Alex Green",
+      "isFeatured": false,
+      "image": "/courses/fitness.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Cooking Made Easy",
+      "slug": "cooking-made-easy",
+      "description": "Learn to cook delicious meals even if you’re a total beginner.",
+      "price": 79.99,
+      "instructor": "Gordon Ray",
+      "isFeatured": true,
+      "image": "/courses/cooking.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Public Speaking Mastery",
+      "slug": "public-speaking-mastery",
+      "description": "Gain confidence and master the art of speaking in public.",
+      "price": 94.99,
+      "instructor": "Rebecca Hill",
+      "isFeatured": false,
+      "image": "/courses/speaking.jpg"
+    }
+  ]
+  
