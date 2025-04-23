@@ -340,7 +340,7 @@ export const TypewriterEffectSmooth = ({
 //         }
 //       );
 //     }
-//   }, [isInView]);
+//   }, [isInView, animate]); // Added animate to the dependency array
 
 //   return (
 //     <div

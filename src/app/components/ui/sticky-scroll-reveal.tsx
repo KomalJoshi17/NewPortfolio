@@ -84,19 +84,7 @@ export const StickyScroll = ({
                   <motion.div
                     className="absolute inset-0 z-10 w-full h-full overflow-hidden rounded-lg shadow-lg shadow-black/30"
                     style={{
-                      // Around line 87, there's an issue with accessing props.src
-                      // We need to check if item.content has props and src properties
-                      // Change this:
                       backgroundImage: `url(${item.content?.props?.src})`,
-                      
-                      // To something like this that checks the type and existence of properties:
-                      backgroundImage: typeof item.content === 'object' && 
-                                      item.content !== null && 
-                                      'props' in item.content && 
-                                      item.content.props && 
-                                      'src' in item.content.props ? 
-                                      `url(${item.content.props.src})` : 
-                                      'none',
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       transform: "scale(1.1)",
