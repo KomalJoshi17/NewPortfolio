@@ -140,12 +140,22 @@ useEffect(() => {
 // }, []);
 
 // Make sure it's inside your component:
-function AnimatedTestimonials() {
+// The error is showing that there's a duplicate function declaration
+// Remove the second declaration of AnimatedTestimonials around line 159
+// Instead, make sure the useEffect hooks are properly placed inside the original function
+
+// Original function should look something like this:
+export function AnimatedTestimonials() {
   if (autoplay && !isHovered) {
     const interval = setInterval(handleNext, 6000);
     return () => clearInterval(interval);
   }
 }
+
+// Remove any duplicate function declarations like:
+// function AnimatedTestimonials() {
+//   ...
+// }
 
 // Fix the unnecessary dependencies warning (around line 131)
 useEffect(() => {
