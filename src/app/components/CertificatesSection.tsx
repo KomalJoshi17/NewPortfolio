@@ -2,6 +2,7 @@
 'use client';  // This will make the component run on the client side
 
 import { motion } from "framer-motion"; // Assuming you're using framer-motion for animations
+import Image from 'next/image';
 
 const CertificatesSection = () => {
   const certificates = [
@@ -56,10 +57,16 @@ const CertificatesSection = () => {
                 transition={{ duration: 0.3 }}
               >
                 {certificate.image && (
-                  <img
-                    src={certificate.image}
-                    alt={certificate.title}
-                    className="object-cover w-full h-full"
+                  // Replace line 59's <img> with <Image>
+                  // Change:
+                  // <img src={certificate.image} alt={certificate.title} className="..." />
+                  // to:
+                  <Image 
+                    src={certificate.image} 
+                    alt={certificate.title} 
+                    width={500} // specify appropriate width
+                    height={300} // specify appropriate height
+                    className="..." 
                   />
                 )}
               </motion.div>

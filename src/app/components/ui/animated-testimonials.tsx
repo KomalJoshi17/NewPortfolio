@@ -121,3 +121,11 @@ export const AnimatedTestimonials = ({
     </section>
   );
 };
+
+// Fix the useEffect dependency array by adding handleNext
+useEffect(() => {
+  if (autoplay && !isHovered) {
+    const interval = setInterval(handleNext, 6000);
+    return () => clearInterval(interval);
+  }
+}, [autoplay, isHovered]);

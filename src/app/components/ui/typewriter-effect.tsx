@@ -325,16 +325,20 @@ export const TypewriterEffectSmooth = ({
 
 //   const [scope, animate] = useAnimate();
 //   const isInView = useInView(scope);
-
+//   // Fix the useEffect dependency array by adding animate
 //   useEffect(() => {
 //     if (isInView) {
 //       animate(
 //         "span",
-//         { display: "inline-block", opacity: 1 },
 //         {
-//           duration: 0.2,
-//           delay: stagger(0.05),
-//           ease: "easeOut",
+//           display: "inline-block",
+//           opacity: 1,
+//           width: "fit-content",
+//         },
+//         {
+//           duration: 0.3,
+//           delay: stagger(0.1),
+//           ease: "easeInOut",
 //         }
 //       );
 //     }
